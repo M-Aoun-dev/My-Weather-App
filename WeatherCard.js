@@ -14,15 +14,15 @@ const WeatherCard = () => {
   const [error, setError] = useState(false);
 
   const getWeatherImage = (condition) => {
-  if (!condition) return logoImg;
+  if (!condition) return defaultImg;
 
   const cond = condition.toLowerCase();
 
   if (cond === "clear") return clearImg;
   if (cond === "cloudy") return cloudyImg;
   if (cond === "rain") return rainImg;
-  if (cond === "thunderstorm") return logoImg; 
-  return logoImg; 
+  if (cond === "thunderstorm") return defaultImg; 
+  return defaultImg; 
 };
 
   useEffect(() => {
